@@ -1,9 +1,8 @@
+import { FlashStallTest } from '@/components/FlashStallTest';
+import '@/styles/index.css';
+
 function App() {
-  return (
-    <>
-      <div className="bg-blue-800 text-white p-4">Tailwind Test</div>
-    </>
-  );
+  return <FlashStallTest />;
 }
 
 export default App;
