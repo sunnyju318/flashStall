@@ -1,3 +1,145 @@
+/*
+FlashStall Design System - Applied Tokens
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* FlashStall Brand Colors (Light Mode) */
+    --background: 45 35% 91%; /* #F0ECE0 - Cream background */
+    --foreground: 40 7% 8%; /* #161513 - Ink text */
+
+    --primary: 214 71% 42%; /* #1F62B9 - Main Blue */
+    --primary-foreground: 0 0% 100%; /* White text on blue */
+
+    --secondary: 351 100% 86%; /* #FFB6C1 - Main Pink */
+    --secondary-foreground: 40 7% 8%; /* Ink text on pink */
+
+    --accent: 45 35% 91%; /* #F0ECE0 - Cream accent */
+    --accent-foreground: 40 7% 8%; /* Ink text on cream */
+
+    --destructive: 0 84% 60%; /* #EF4443 - Sub Red */
+    --destructive-foreground: 0 0% 100%; /* White text on red */
+
+    --success: 145 39% 47%; /* #49A870 - Sub Green */
+    --success-foreground: 0 0% 100%; /* White text on green */
+
+    --muted: 0 0% 81%; /* #CFCFCF - Muted gray */
+    --muted-foreground: 40 7% 8%; /* Ink text on muted */
+
+    --card: 0 0% 100%; /* #FFFFFF - White surface */
+    --card-foreground: 40 7% 8%; /* Ink text on card */
+
+    --popover: 0 0% 100%; /* White popover */
+    --popover-foreground: 40 7% 8%; /* Ink text */
+
+    --border: 43 21% 87%; /* #E4E0D6 - Light border */
+    --input: 0 0% 100%; /* White input background */
+    --ring: 214 71% 42%; /* Blue focus ring */
+
+    /* FlashStall Chart Colors */
+    --chart-1: 214 71% 42%; /* Main Blue */
+    --chart-2: 351 100% 86%; /* Main Pink */
+    --chart-3: 0 84% 60%; /* Sub Red */
+    --chart-4: 145 39% 47%; /* Sub Green */
+    --chart-5: 45 35% 91%; /* Cream */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* FlashStall Dark Mode */
+    --background: 40 7% 8%; /* Dark ink background */
+    --foreground: 45 35% 91%; /* Cream text */
+
+    --primary: 214 71% 42%; /* Keep blue primary */
+    --primary-foreground: 0 0% 100%; /* White text */
+
+    --secondary: 351 100% 76%; /* Slightly darker pink */
+    --secondary-foreground: 40 7% 8%; /* Dark text on pink */
+
+    --accent: 43 21% 20%; /* Dark cream accent */
+    --accent-foreground: 45 35% 91%; /* Light text */
+
+    --destructive: 0 84% 60%; /* Keep red */
+    --destructive-foreground: 0 0% 100%; /* White text */
+
+    --success: 145 39% 47%; /* Keep green */
+    --success-foreground: 0 0% 100%; /* White text */
+
+    --muted: 43 21% 20%; /* Dark muted */
+    --muted-foreground: 0 0% 81%; /* Light muted text */
+
+    --card: 43 21% 15%; /* Dark card */
+    --card-foreground: 45 35% 91%; /* Light text on card */
+
+    --popover: 43 21% 15%; /* Dark popover */
+    --popover-foreground: 45 35% 91%; /* Light text */
+
+    --border: 43 21% 25%; /* Dark border */
+    --input: 43 21% 15%; /* Dark input */
+    --ring: 214 71% 42%; /* Keep blue ring */
+
+    /* Dark Chart Colors */
+    --chart-1: 214 71% 52%; /* Lighter blue for dark mode */
+    --chart-2: 351 100% 76%; /* Lighter pink */
+    --chart-3: 0 84% 70%; /* Lighter red */
+    --chart-4: 145 39% 57%; /* Lighter green */
+    --chart-5: 45 35% 81%; /* Lighter cream */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* FlashStall Typography Classes */
+  h1 {
+    @apply font-heading text-h1-mobile md:text-h1-desktop;
+  }
+
+  h2 {
+    @apply font-heading text-h2-mobile md:text-h2-desktop;
+  }
+
+  h3 {
+    @apply font-heading text-h3-mobile md:text-h3-desktop;
+  }
+
+  p {
+    @apply font-body text-body-mobile md:text-body-desktop;
+  }
+
+  /* FlashStall Specific Utility Classes */
+  .flashstall-primary {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .flashstall-secondary {
+    @apply bg-secondary text-secondary-foreground;
+  }
+
+  .flashstall-success {
+    @apply bg-success text-success-foreground;
+  }
+
+  .flashstall-surface {
+    @apply bg-card text-card-foreground border border-border;
+  }
+
+  .flashstall-button {
+    @apply font-ui text-button-mobile md:text-button-desktop;
+  }
+
+  .flashstall-meta {
+    @apply font-ui text-meta-mobile md:text-meta-desktop;
+  }
+}
